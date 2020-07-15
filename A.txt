@@ -1,0 +1,188 @@
+1. Tableau Basics
+	# Connecting Tableau to Data File - Text File, CSV
+	# Navigating Tableau
+	# creating calculated fields TotalSales = Units*Units Price
+	# Adding colors drag and press control
+	# Labels and Formatting
+	# exporting data
+
+
+2. Time Series Aggregation and Filters
+	# Working with data extracts
+	connect to excel
+	data extracts
+
+	# working with time series 
+	aggregation and granularity
+	can be as measures (numerical) or dimensions (categorical)
+
+	# understanding aggregation, granularity, and level of detail
+	filter and quick filter
+	line chart, shapes, show-me, area chart, highlighting
+
+
+3. Maps, Scatterplot, & Dashboard
+	# Joining Data in Tableau
+	# Create Map, working with hierarchies (geography)
+	# create scatterplot applying filters to multiple worksheet
+	# create dashboard
+	# adding an interactive action - QuickFilter, Filter action
+	# adding an interactive action - highlighting action
+	map, scatterplot, dashboard layout
+
+4. Joining on Multiple Fields
+	# LEFT, RIGHT, INNER, and OUTER JOIN
+	# join with duplicate values
+	# joining with multiple fields (multiple match column):
+	
+	Table A				Table B
+	Store	Order#	Customer	Store	Order#	Item	Sales
+	North	001	Mike		North	001	Laptop	999
+	North	002	Jack		North	001	Mouse	49
+	South	001	Susan		North	002	Monitor	155
+					South	001	Camera	97
+	
+	Left join
+	on A.OrderNum = B.OrderNum
+	AND A.Store = B.Store
+
+	Table A				Table B
+	Store	Order#	Customer	Store	Order#	Item	Sales
+	North	001	Mike		North	001	Laptop	999
+	North	001	Mike		North	001	Mouse	49
+	North	002	Jack		North	002	Monitor	155
+	South	001	Susan		South	001	Camera	97
+	
+	# Joining data vs blending data
+	if the dataset is different (csv,excel,sql) you cannot do join
+	it should be blending
+	if you have different level of granularity you cannot do join
+	it should be blending
+	
+	# Data blending - Left join
+	left table the blue one
+	orange table the orange one
+	if you see it automatically an orang chain appear beside column
+	it because the same column name
+	can be controlled through 'Data' menu
+	occurs on the level of granularity of our view
+	aggregations happens before the blend	
+
+	# Dual Axis and Synchronize axis(y-axis matching)
+	# creating calculated fields in a blend
+	every data element used have to be aggregated (SUM, AVG, etc)
+	
+
+5. Table Calculations, Advanced Dashboards, Storytelling
+	# downloading dataset and connecting to Tableau
+	# Mapping geographical roles (globe symbol)
+	right click on dimension - set geographic state/province
+	# Table calculatoins for gender
+	right click on measures features - quick table calculation (Percent of Total)
+	# create bins and distributions for age
+	right click on Data - Create Parameter
+	# parameter for age(bin) / balance(bin)
+	# tree map chart
+	box form
+	# customer segmentation dashboard
+	for deeper understnading of data
+	# advanced dashboard interactivity - no pop up(worksheet)
+	# analyzing the customer segmentation dashboard
+	the data has been shown will help you predict what kind of champaign
+	you should use to approach certain market in different region
+	# creating a storyline
+	cannot combine 2 or more worksheet/dashboard
+	change on one page in storyline won't influence another stroyline page
+	filled map, pie chart, distributions, treemap, storyline
+
+6. Advanced Data Preparation
+	# what format your data should be in
+	you will always find that your data is not properly cleaned
+	especially for excel data where it is easily edited
+	machine cannot easily understand data, not like human visual
+	# Data interpreter	
+	automatically clean your messy data
+	# Pivot
+	you will might need year column to be row
+	block every column and right click pivot
+	# spliting column into multiple column
+	for example you have full name => first_name + last_name
+	click on the right pane of column - split
+	# metadata grid
+	representation of your data - you can change column name etc
+	# fixing geographical data errors
+	example you have country data which is not exist in the map
+
+
+7. Clusters, Custom Territories, Design Features
+	# custom territories via groups
+	click on every area on your map
+	right click then choose create group
+	
+	# custom territories via Geographic Roles
+	select dimension variable and right click
+
+	# highlighting (almost similar with filter)
+	when creating maps you should aware of some cities name which is not
+	recognized by tableau, it would be easy if you input it through state
+	differentiate data through highlight (rather than color or shape)
+	
+	# clustering using tableau
+	create a scatter plot for y=revenue and x=marketing spend for each store id
+	you will see a group of store id having a higher revenue when MS spend increase
+	but you will see a group of store id not so good in revenue even if MS increase
+	create clustering using - Analytics
+	
+	# Cross Database Join
+	from clustered data we may assume that such a case happen because
+	of the number of population in certain city
+	it's gonna make sense when the higher number of population
+	the higher number of dirty clothes
+	so we need another data showing population
+	now we can join data even from different source
+	
+	# Modeling with cluster
+	when we input population as a parameter for clustering
+	we see that population count more on deciding revenue
+
+	you can make a trend line from clustered group of data
+	by using analytics - it is a part of regression modelling
+
+	we can filter trend line using highlighting for new store
+	from a trend line we have we can see which one is the most 
+	outstanding store to invest for money to acquire much profit (orange ones)
+	
+	# Save cluster
+	after we create a cluster we can use it as a dimension so we should
+	not plot it more and more for another worksheet we need
+
+	# new design features
+	www.tableau.com for tableau 10
+	
+	# new mobile features
+	
+	
+8. What's new in Tableau
+	# connecting into pdf
+	merge mismatched component
+
+	the data you acquire from pdf might have 'TOTAL' blabla
+	you can remove/exclude it in data source by Filter 
+
+	# connecting to spatial file
+	Shapefiles
+	MapInfo tables
+	KML (Keyhole Markup Language)
+	GEOJson
+	
+	# joining to spatial files
+	join two name of park
+	delete some file in pdf which doesn't exist on spatial
+
+	# Putting it All together
+	
+	# Step and Jump Line Chart
+
+	# Viz in tool tip
+	
+	
